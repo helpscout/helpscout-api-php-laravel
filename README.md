@@ -69,7 +69,7 @@ HS_APP_ID=your-app-id
 HS_APP_SECRET=your-app-secret
 ```
 
-### Legacy Token Flow
+### Legacy Credentials Flow
 To ease the transition of legacy apps to the new API, the API client uses the [transition service](https://developer.helpscout.com/mailbox-api/migration/transition-service/) to exchange the legacy `clientId` and `apiKey` for an `access_token`. 
 
 Just as with the `client_credentials` flow described above, if the API client does not have an `access_token` when attempting an API call, it  will make a pre-flight request to the transition service to exchange the legacy credentials for a valid `access_token`.
@@ -77,7 +77,7 @@ Just as with the `client_credentials` flow described above, if the API client do
 To use this grant type, set the following environment variables:
 
 ```
-HS_AUTH_TYPE=legacy_token
+HS_AUTH_TYPE=legacy_credentials
 HS_CLIENT_ID=your-client-id
 HS_API_KEY=your-api-key
 ```
