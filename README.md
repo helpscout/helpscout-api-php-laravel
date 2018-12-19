@@ -120,7 +120,7 @@ $client = app('helpscout');
 $webhooks = $client->webhooks()->list();
 ```
 
-Or,type-hint the client in a constructor or method signature.
+Or, type-hint the client in a constructor or method signature.
 ```php
 use HelpScout\Api\ApiClient;
 use HelpScout\Api\Entity\PagedCollection;
