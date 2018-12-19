@@ -45,20 +45,11 @@ class HelpScoutServiceProvider extends ServiceProvider
         }
 
         $this->mergeConfigFrom(\dirname(__DIR__).'/config/helpscout.php', 'helpscout');
+        $this->bootApiClient();
+        $this->bootEndpoints();
     }
 
-    /**
-     * Register the service provider.
-     *
-     * @throws \RuntimeException
-     */
-    public function register()
-    {
-        $this->registerApiClient();
-        $this->registerEndpoints();
-    }
-
-    protected function registerApiClient(): void
+    protected function bootApiClient(): void
     {
         $this->app->singleton(ApiClient::class, function ($app) {
             $config = $app->make('config')->get('helpscout', []);
@@ -69,7 +60,7 @@ class HelpScoutServiceProvider extends ServiceProvider
         $this->app->alias(ApiClient::class, 'helpscout');
     }
 
-    protected function registerEndpoints(): void
+    protected function bootEndpoints(): void
     {
         foreach (ApiClient::AVAILABLE_ENDPOINTS as $alias => $endpoint) {
             $this->registerEndpoint($endpoint, $alias);
