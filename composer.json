@@ -45,7 +45,7 @@
     "test:travis": ["@sniff", "@analyse", "@phpunit:clover"],
     "test:report": "vendor/bin/phpunit --coverage-html build/reports/phpunit"
   },
-  "minimum-stability": "dev",
+  "minimum-stability": "stable",
   "prefer-stable": true,
   "extra": {
     "laravel": {
