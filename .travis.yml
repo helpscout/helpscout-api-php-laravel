@@ -18,6 +18,6 @@ matrix:
 before_script:
   - composer self-update
   - composer install --no-interaction
-  - travis_retry composer require laravel/framework;
+  - travis_retry composer require laravel/framework laravel/lumen-framework;
 script:
   - composer test:travis

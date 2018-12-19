@@ -8,11 +8,14 @@ use HelpScout\Api\ApiClient;
 use HelpScout\Api\Workflows\WorkflowsEndpoint;
 use HelpScout\Laravel\HelpScoutFacade as HelpScout;
 use HelpScout\Laravel\HelpScoutServiceProvider;
-use Illuminate\Contracts\Container\Container;
+use Illuminate\Contracts\Foundation\Application;
 use PHPUnit\Framework\TestCase;
 
 abstract class ServiceProviderTest extends TestCase
 {
+    /**
+     * @var Application
+     */
     protected $app;
 
     public function setUp()
@@ -25,7 +28,7 @@ abstract class ServiceProviderTest extends TestCase
     }
 
     /**
-     * @return Container
+     * @return Application
      */
     abstract protected function setupApplication();
 

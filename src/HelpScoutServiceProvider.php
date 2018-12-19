@@ -6,7 +6,9 @@ namespace HelpScout\Laravel;
 
 use HelpScout\Api\ApiClient;
 use HelpScout\Api\ApiClientFactory;
+use Illuminate\Foundation\Application as LaravelApplication;
 use Illuminate\Support\ServiceProvider;
+use Laravel\Lumen\Application as LumenApplication;
 
 class HelpScoutServiceProvider extends ServiceProvider
 {
