@@ -1,6 +1,5 @@
 env:
   global:
-    - CC_TEST_REPORTER_ID=''
     - GIT_COMMITTED_AT=$(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then git log -1 --pretty=format:%ct; else git log -1 --skip 1 --pretty=format:%ct; fi)
 
 language: php
@@ -8,16 +7,11 @@ language: php
 php:
   - 7.1
   - 7.2
-  - 7.3
-  - nightly
-
-matrix:
-  allow_failures:
-    - php: nightly
 
 before_script:
   - composer self-update
   - composer install --no-interaction
   - travis_retry composer require laravel/framework laravel/lumen-framework;
+
 script:
   - composer test:travis
