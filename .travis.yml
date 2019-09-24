@@ -1,4 +1,7 @@
 env:
+  matrix:
+    - ILLUMINATE_VERSION="^5.8"
+#    Add other versions here to test against multiple framework versions
   global:
     - GIT_COMMITTED_AT=$(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then git log -1 --pretty=format:%ct; else git log -1 --skip 1 --pretty=format:%ct; fi)
 
@@ -10,8 +13,7 @@ php:
 
 before_script:
   - composer self-update
-  - composer install --no-interaction
-  - travis_retry composer require laravel/framework laravel/lumen-framework;
+  - travis_retry composer require laravel/framework:${ILLUMINATE_VERSION} laravel/lumen-framework:${ILLUMINATE_VERSION} --no-interaction;
 
 script:
   - composer test:travis
