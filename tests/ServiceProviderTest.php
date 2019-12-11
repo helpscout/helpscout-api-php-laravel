@@ -32,9 +32,6 @@ abstract class ServiceProviderTest extends TestCase
      */
     abstract protected function setupApplication();
 
-    /**
-     * @return HelpScoutServiceProvider
-     */
     private function setupServiceProvider(): HelpScoutServiceProvider
     {
         // Create and register the provider.
@@ -75,9 +72,6 @@ abstract class ServiceProviderTest extends TestCase
 
     /**
      * @dataProvider endpointDataProvider
-     *
-     * @param string $alias
-     * @param string $endpoint
      */
     public function testContainerResolvesEndpoints(string $alias, string $endpoint): void
     {
