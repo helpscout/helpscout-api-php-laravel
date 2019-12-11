@@ -180,7 +180,7 @@ $webhooks = HelpScout::webhooks()->list();
 
 ## Links
 
-* [HelpScout PHP Client on Github](http://github.com/helpscout/helpscout-php-api/)
+* [HelpScout PHP Client on Github](https://github.com/helpscout/helpscout-api-php)
 * [Help Scout on Packagist](https://packagist.org/packages/helpscout/)
 * [Laravel website](http://laravel.com/)
 * [Lumen website](http://lumen.laravel.com/)
