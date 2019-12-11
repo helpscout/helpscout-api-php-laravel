@@ -1,15 +1,22 @@
 env:
   matrix:
     - ILLUMINATE_VERSION="^5.8"
+    - ILLUMINATE_VERSION="^6.0"
 #    Add other versions here to test against multiple framework versions
   global:
     - GIT_COMMITTED_AT=$(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then git log -1 --pretty=format:%ct; else git log -1 --skip 1 --pretty=format:%ct; fi)
 
 language: php
 
+# Laravel 5 is the only Laravel we support that's compatible with PHP v7.1
+jobs:
+  include:
+    - php: 7.1
+      env: ILLUMINATE_VERSION="^5.8"
+
 php:
-  - 7.1
   - 7.2
+  - 7.3
   - 7.4
 
 before_script:
