@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/helpscout/helpscout-api-php-laravel.svg?branch=master)](https://travis-ci.org/helpscout/helpscout-api-php-laravel)
 [![Maintainability](https://api.codeclimate.com/v1/badges/1ba2a0f530ad657a5ae4/maintainability)](https://codeclimate.com/repos/5c1a626b8f1a3a02c4002349/maintainability)
 
-This package contains a service provider and facade for use with [Laravel](http://laravel.com/) and [Lumen](http://lumen.laravel.com/).
+This package contains a service provider and facade for use with [Laravel](http://laravel.com) and [Lumen](http://lumen.laravel.com/).
 
 ## Installation
 
