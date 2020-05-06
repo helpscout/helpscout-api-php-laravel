@@ -13,7 +13,7 @@ The Help Scout Service Provider can be installed via [Composer](http://getcompos
 ```json
 {
     "require": {
-        "helpscout/api-laravel": "~1.0"
+        "helpscout/api-laravel": "~2.0"
     }
 }
 ```

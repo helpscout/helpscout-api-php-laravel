@@ -16,8 +16,8 @@
     "source": "https://github.com/helpscout/helpscout-api-php-laravel"
   },
   "require": {
-    "php": "^7.1",
-    "helpscout/api": "~2.0",
+    "php": "^7.3",
+    "helpscout/api": "~3.0",
     "illuminate/support": "^5.6|^6.0|^7.0"
   },
   "require-dev": {

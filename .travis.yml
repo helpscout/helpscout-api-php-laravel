@@ -1,6 +1,5 @@
 env:
   matrix:
-    - ILLUMINATE_VERSION="^5.8"
     - ILLUMINATE_VERSION="^6.0"
     - ILLUMINATE_VERSION="^7.0"
 #    Add other versions here to test against multiple framework versions
@@ -9,14 +8,7 @@ env:
 
 language: php
 
-# Laravel 5 is the only Laravel we support that's compatible with PHP v7.1
-jobs:
-  include:
-    - php: 7.1
-      env: ILLUMINATE_VERSION="^5.8"
-
 php:
-  - 7.2
   - 7.3
   - 7.4
 
