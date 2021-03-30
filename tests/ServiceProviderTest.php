@@ -18,7 +18,7 @@ abstract class ServiceProviderTest extends TestCase
      */
     protected $app;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
         $this->app = $this->setupApplication();
