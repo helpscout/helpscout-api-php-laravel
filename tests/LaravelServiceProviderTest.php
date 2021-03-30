@@ -9,7 +9,7 @@ use Illuminate\Foundation\Application;
 
 class LaravelServiceProviderTest extends ServiceProviderTest
 {
-    public function setUp(): void
+    protected function setUp(): void
     {
         if (!class_exists(Application::class)) {
             $this->markTestSkipped();
