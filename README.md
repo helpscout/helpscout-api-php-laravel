@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/helpscout/helpscout-api-php-laravel.svg?branch=master)](https://travis-ci.org/helpscout/helpscout-api-php-laravel)
 [![Maintainability](https://api.codeclimate.com/v1/badges/1ba2a0f530ad657a5ae4/maintainability)](https://codeclimate.com/repos/5c1a626b8f1a3a02c4002349/maintainability)
 
-This package contains a service provider and facade for use with [Laravel](http://laravel.com/) and [Lumen](http://lumen.laravel.com/).
+This package contains a service provider and facade for use with [Laravel](http://laravel.com) and [Lumen](http://lumen.laravel.com/).
 
 ## Installation
 
@@ -13,7 +13,7 @@ The Help Scout Service Provider can be installed via [Composer](http://getcompos
 ```json
 {
     "require": {
-        "helpscout/api-laravel": "~1.0"
+        "helpscout/api-laravel": "~2.0"
     }
 }
 ```
@@ -180,7 +180,7 @@ $webhooks = HelpScout::webhooks()->list();
 
 ## Links
 
-* [HelpScout PHP Client on Github](http://github.com/helpscout/helpscout-php-api/)
+* [HelpScout PHP Client on Github](https://github.com/helpscout/helpscout-api-php)
 * [Help Scout on Packagist](https://packagist.org/packages/helpscout/)
 * [Laravel website](http://laravel.com/)
 * [Lumen website](http://lumen.laravel.com/)

@@ -67,10 +67,6 @@ class HelpScoutServiceProvider extends ServiceProvider
         }
     }
 
-    /**
-     * @param string $endpoint
-     * @param string $alias
-     */
     protected function registerEndpoint(string $endpoint, string $alias): void
     {
         $client = $this->app->get(ApiClient::class);
@@ -84,11 +80,6 @@ class HelpScoutServiceProvider extends ServiceProvider
         $this->app->alias($endpoint, $alias);
     }
 
-    /**
-     * @param string $alias
-     *
-     * @return string
-     */
     protected function getMethodFromAlias(string $alias): string
     {
         return \str_replace('hs.', '', $alias);
