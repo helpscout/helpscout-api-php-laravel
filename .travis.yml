@@ -1,6 +1,5 @@
 env:
   matrix:
-    - ILLUMINATE_VERSION="^6.0"
     - ILLUMINATE_VERSION="^7.0"
     - ILLUMINATE_VERSION="^8.0"
 #    Add other versions here to test against multiple framework versions
