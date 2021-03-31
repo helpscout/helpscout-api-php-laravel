@@ -9,7 +9,7 @@ use Illuminate\Foundation\Application;
 
 class LumenServiceProviderTest extends ServiceProviderTest
 {
-    public function setUp()
+    protected function setUp(): void
     {
         if (!class_exists(Application::class)) {
             $this->markTestSkipped();

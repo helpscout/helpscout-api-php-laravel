@@ -1,16 +1,17 @@
 env:
   matrix:
-    - ILLUMINATE_VERSION="^6.0"
-    - ILLUMINATE_VERSION="^7.0"
+    - ILLUMINATE_VERSION="^8.0"
 #    Add other versions here to test against multiple framework versions
   global:
     - GIT_COMMITTED_AT=$(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then git log -1 --pretty=format:%ct; else git log -1 --skip 1 --pretty=format:%ct; fi)
+    - XDEBUG_MODE=coverage
 
 language: php
 
 php:
   - 7.3
   - 7.4
+  - 8.0
 
 before_script:
   - composer self-update
